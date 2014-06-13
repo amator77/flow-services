@@ -3,17 +3,21 @@ package flow.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 @Entity
+@ToString
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, isGetterVisibility = JsonAutoDetect.Visibility.NONE)
 public class Window  extends AbstractEntity {
 	
-	@Column(name="name")
+	@Getter @Setter @Column(name="name")
 	private String name;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	} 			
+	
+	@Getter @Setter
+	private String test;
+	
 }

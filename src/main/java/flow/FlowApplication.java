@@ -1,4 +1,4 @@
-package sample.run;
+package flow;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

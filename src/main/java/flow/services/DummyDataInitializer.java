@@ -14,12 +14,14 @@ public class DummyDataInitializer {
 	@Autowired
 	public DummyDataInitializer(WindowRepository repository){
 		
-		Window w1 = new Window();		
+		Window w1 = new Window();
 		w1.setName("w1");
+		w1.setTest("aaaaaaaaaaaaa");
 		
-		Window w2 = new Window();		
+		Window w2 = new Window();
+		w2.setTest("bbbbbbbbbbbbbbbbbbbbbbbbbbb");
 		w2.setName("w2");
 		
-		repository.save(Arrays.asList(w1, w2));				
-	}	
+		repository.save(Arrays.asList(w1, w2));
+	}
 }
